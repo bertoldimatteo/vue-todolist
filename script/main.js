@@ -20,6 +20,7 @@ let app = new Vue({
             },
         ],
         newTodo: '',
+        darkMode: false,
     },
     methods: {
         taskDone(i) {
@@ -34,6 +35,9 @@ let app = new Vue({
                 this.todo.push(newObj);
                 this.newTodo = '';
             }
+        },
+        mode() {
+            this.darkMode = !this.darkMode;
         },
     },
 })

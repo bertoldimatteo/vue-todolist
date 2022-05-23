@@ -7,7 +7,6 @@
 .box {
     max-width: 1080px;
     margin: 100px auto;
-    height: 500px;
 }
 i, h1 {
     color: #1DA1F2;
@@ -38,7 +37,7 @@ span {
     content: url('./images/day-sunny.svg');
     width: 40px;
     height: 40px;
-    background-color: #e03c3c;
+    background-color: #1DA1F2;
     border: 2px solid #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .25);
@@ -131,17 +130,26 @@ li {
 }
 .fa-check:hover, .fa-xmark:hover {
     color: #fff;
+    border: none;
     animation: first_color .5s
     ease-in-out infinite alternate;
 }
 /* HOVER/ANIMATION */
 @keyframes first_color {
     0% {
+        border: none;
         text-shadow: 0 0 10px #1877f2,
         0 0 20px #1459b3, 0 0 30px #179bff
     }
     100% {
+        border: none;
         text-shadow: 0 0 5px #1877f2,
         0 0 10px #1459b3, 0 0 15px #179bff
     }
 }
+/* DARK-MODE */
+.darkMode {
+    background-color: black;
+    color: white;
+    z-index: -2;
+};

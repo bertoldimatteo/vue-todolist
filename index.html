@@ -13,27 +13,28 @@
 </head>
 <body>
     
-    <div class="box">
-        <div id="root">
-            <div class="dark-light-mode">
-                <input type="checkbox" id="toggle">
-                <label for="toggle" class="mode"></label>
-            </div>
-            <div class="title">
-                <h1>Todo list</h1>
-            </div>
-            <div class="form container">
-                <input class="userField" type="text" placeholder="Inserisci nuova attività" v-model="newTodo" @keyup.enter="addList()">
-                <button class="cta" type="submit" @click="addList()">Aggiungi<i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+    <div id="root">
+        <div class="container" :class="{darkMode : darkMode === true}">
+            <div class="box"></div>
+                <div class="dark-light-mode">
+                    <input type="checkbox" id="toggle">
+                    <label for="toggle" class="mode" id="darkMode" @click="mode()"></label>
+                </div>
+                <div class="title">
+                    <h1>Todo list</h1>
+                </div>
+                <div class="form container">
+                    <input class="userField" type="text" placeholder="Inserisci nuova attività" v-model="newTodo" @keyup.enter="addList()">
+                    <button class="cta" type="submit" @click="addList()">Aggiungi<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
 
-            <div class="list">
-                <ul v-if="todo.length > 0">
-                    <li class="li-item" v-for="(obj, index) in todo" :class="{underline : obj.done === true}"><span>{{obj.text}}</span><button class="ms-auto btn"><i class="fa-solid fa-check" @click="taskDone(index)"></i></button><button class="btn"><i class="fa-solid fa-xmark removeIcon ml-auto" @click="remove(index)"></i></button></li>
-                </ul>
-                <p v-else>Non sono presenti attività in programma</p>
+                <div class="list">
+                    <ul v-if="todo.length > 0">
+                        <li class="li-item" v-for="(obj, index) in todo" :class="{underline : obj.done === true}"><span>{{obj.text}}</span><button class="ms-auto btn"><i class="fa-solid fa-check" @click="taskDone(index)"></i></button><button class="btn"><i class="fa-solid fa-xmark removeIcon ml-auto" @click="remove(index)"></i></button></li>
+                    </ul>
+                    <p v-else>Non sono presenti attività in programma</p>
+                </div>
             </div>
-
         </div>
     </div>
 

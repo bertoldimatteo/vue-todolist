@@ -10,4 +10,18 @@
 }
 .form {
     text-align: center;
+    margin: 50px 0;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+.li-item {
+    background-color: lightgray;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 5px 0;
+}
+.removeIcon {
+    margin: 0 10px;
 }

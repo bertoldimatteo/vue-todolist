@@ -25,3 +25,6 @@
 .removeIcon {
     margin: 0 10px;
 }
+.underline {
+    text-decoration: line-through;
+}

@@ -23,7 +23,7 @@
 
             <div class="list">
                 <ul>
-                    <li class="li-item" v-for="(obj, index) in todo">{{obj.text}}<i class="fa-solid fa-check" @click="taskDone(index)"></i><i class="fa-solid fa-xmark removeIcon"></i></li>
+                    <li class="li-item" v-for="(obj, index) in todo" :class="{underline : done === true}">{{obj.text}}<i class="fa-solid fa-check" @click="taskDone(index)"></i><i class="fa-solid fa-xmark removeIcon"></i></li>
                 </ul>
             </div>
 

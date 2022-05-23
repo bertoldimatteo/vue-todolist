@@ -23,6 +23,7 @@ let app = new Vue({
     methods: {
         taskDone(i) {
             this.todo[i].done = !this.todo[i].done;
+            console.log(this.todo[i].done);
         }
     },
 })

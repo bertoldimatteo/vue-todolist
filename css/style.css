@@ -1,20 +1,31 @@
+/* GENERIC */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container {
-    max-width: 1200px;
+.box {
+    max-width: 1080px;
     margin: 100px auto;
     height: 500px;
+}
+/* BODY */
+ul {
+    padding: 0;
+}
+span {
+    margin: 0 15px;
+}
+li {
+    display: flex;
+    align-items: center;
 }
 .form {
     text-align: center;
     margin: 50px 0;
 }
 .list{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 .li-item {
     background-color: lightgray;

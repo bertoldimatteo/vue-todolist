@@ -15,9 +15,9 @@
         <div id="root">
 
             <div class="form">
-                <form>
-                    <input type="text">
-                    <input type="submit">
+                <form @submit.prevent="addList()">
+                    <input type="text" v-model="newTodo">
+                    <button type="submit">Aggiungi</button>
                 </form>
             </div>
 

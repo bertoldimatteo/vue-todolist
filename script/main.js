@@ -18,7 +18,8 @@ let app = new Vue({
                 text: 'Andare in palestra',
                 done: false,
             },
-        ]
+        ],
+        newTodo: '',
     },
     methods: {
         taskDone(i) {
@@ -26,7 +27,14 @@ let app = new Vue({
         },
         remove(i) {
             this.todo.splice(i, 1);
-        }
+        },
+        addList() {
+            if (this.newTodo !== ' ' ){
+                console.log(this.newTodo);
+                this.todo.push(this.newTodo);
+                this.newTodo = '';
+            }
+        },
     },
 })
 

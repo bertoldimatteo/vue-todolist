@@ -22,9 +22,10 @@ let app = new Vue({
     },
     methods: {
         taskDone(i) {
-            console.log(i ,this.todo[i].done);
             this.todo[i].done = !this.todo[i].done;
-            console.log(i ,this.todo[i].done);
+        },
+        remove(i) {
+            this.todo.splice(i, 1);
         }
     },
 })

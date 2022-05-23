@@ -12,10 +12,18 @@
     <div class="container">
         <div id="root">
 
-            <form class="form">
-                <input type="text">
-                <input type="submit">
-            </form>
+            <div class="form">
+                <form>
+                    <input type="text">
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li v-for="obj in todo">{{obj.text}}</li>
+                </ul>
+            </div>
 
         </div>
     </div>

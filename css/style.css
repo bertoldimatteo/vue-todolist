@@ -9,7 +9,7 @@
     margin: 100px auto;
     height: 500px;
 }
-i {
+i, h1 {
     color: #1DA1F2;
 }
 ul {
@@ -25,6 +25,8 @@ span {
 li {
     display: flex;
     align-items: center;
+    border: 1px solid #1DA1F2;
+    border-radius: 10px;
 }
 .form {
     text-align: center;
@@ -34,7 +36,6 @@ li {
     width: 100%;
 }
 .li-item {
-    background-color: lightgray;
     list-style-type: none;
     padding: 10px 0;
     margin: 5px 0;
@@ -45,19 +46,25 @@ li {
 .underline {
     text-decoration: line-through;
 }
+.userField {
+    border: 1px solid #1DA1F2;
+    padding: 8px 100px;
+    border-radius: 20px;
+}
 .cta {
     color: #fff;
     background: none;
     padding: 12px 18px;
     position: relative;
     border: none;
+    margin: 0 30px;
 }
 .cta:before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%)
-    translateX(calc(150% + 4px));
+    translateX(calc(70% + 4px));
     width: 40px;
     height: 40px;
     background: #1DA1F2;
@@ -69,6 +76,7 @@ li {
 }    
 .cta:hover::before {
     width: 100%;
+    color: #fff;
     transform: translateY(-50%)
     translateX(-18px);
     transition: transform .25s .25s
@@ -84,4 +92,19 @@ li {
 .cta:hover i {
     transform: translate(5px);
 }
+.fa-check:hover, .fa-xmark:hover {
+    color: #fff;
+    animation: first_color .5s
+    ease-in-out infinite alternate;
+}
 /* HOVER/ANIMATION */
+@keyframes first_color {
+    0% {
+        text-shadow: 0 0 10px #1877f2,
+        0 0 20px #1459b3, 0 0 30px #179bff
+    }
+    100% {
+        text-shadow: 0 0 5px #1877f2,
+        0 0 10px #1459b3, 0 0 15px #179bff
+    }
+}

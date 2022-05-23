@@ -19,7 +19,7 @@
                 <h1>Todo list</h1>
             </div>
             <div class="form container">
-                <input type="text" placeholder="Inserisci nuova attività" v-model="newTodo" @keyup.enter="addList()">
+                <input class="userField" type="text" placeholder="Inserisci nuova attività" v-model="newTodo" @keyup.enter="addList()">
                 <button class="cta" type="submit" @click="addList()">Aggiungi<i class="fa-solid fa-arrow-right"></i></button>
             </div>
 

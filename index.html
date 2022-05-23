@@ -11,14 +11,14 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body id="body">
     
     <div id="root">
-        <div class="container" :class="{darkMode : darkMode === true}">
-            <div class="box"></div>
+        <div class="container">
+            <div class="box">
                 <div class="dark-light-mode">
                     <input type="checkbox" id="toggle">
-                    <label for="toggle" class="mode" id="darkMode" @click="mode()"></label>
+                    <label for="toggle" class="mode" id="darkMode"></label>
                 </div>
                 <div class="title">
                     <h1>Todo list</h1>
@@ -30,7 +30,7 @@
 
                 <div class="list">
                     <ul v-if="todo.length > 0">
-                        <li class="li-item" v-for="(obj, index) in todo" :class="{underline : obj.done === true}"><span>{{obj.text}}</span><button class="ms-auto btn"><i class="fa-solid fa-check" @click="taskDone(index)"></i></button><button class="btn"><i class="fa-solid fa-xmark removeIcon ml-auto" @click="remove(index)"></i></button></li>
+                        <li class="li-item" v-for="(obj, index) in todo" :class="{underline : obj.done === true}"><span>{{obj.text}}</span><span class="ms-auto btn"><i class="fa-solid fa-check" @click="taskDone(index)"></i></span><span class="btn"><i class="fa-solid fa-xmark removeIcon ml-auto" @click="remove(index)"></i></span></li>
                     </ul>
                     <p v-else>Non sono presenti attività in programma</p>
                 </div>

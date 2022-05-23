@@ -42,6 +42,19 @@ let app = new Vue({
     },
 })
 
+let dark = false;
+
+const button = document.getElementById("darkMode");
+const element = document.getElementById("body");
+button.addEventListener("click", function(){
+    if(dark === false){
+        dark = !dark;
+        element.classList.add('darkMode');
+    } else if ( dark === true){
+        dark = !dark;
+        element.classList.remove('darkMode');
+    }
+})
 // Descrizione:
 // Rifare l'esercizio della to do list.
 // Questa volta però ogni todo sarà un oggetto, formato da due proprietà:

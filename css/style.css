@@ -34,7 +34,8 @@ span {
     cursor: pointer;
 }
 .mode::after{
-    content: url('./images/day-sunny.svg');
+    content: url('/images/day-sunny.svg');
+    color: #fff;
     width: 40px;
     height: 40px;
     background-color: #1DA1F2;
@@ -46,12 +47,14 @@ span {
     left: 0;
     display: grid;
     place-content: center;
-    line-height: 0;
+    line-height: 40px;
+    vertical-align: middle;
     transition: background-color 1s,
     transform 1s ease-in;
 }
 #toggle:checked + .mode::after{
-    content: url('./images/moon-line.svg');
+    content: url('/images/moon-line.svg');
+    color: #fff;
     background-color: #1f257f;
     transform: translateX(50px) rotate(360deg);
 }
@@ -137,12 +140,10 @@ li {
 /* HOVER/ANIMATION */
 @keyframes first_color {
     0% {
-        border: none;
         text-shadow: 0 0 10px #1877f2,
         0 0 20px #1459b3, 0 0 30px #179bff
     }
     100% {
-        border: none;
         text-shadow: 0 0 5px #1877f2,
         0 0 10px #1459b3, 0 0 15px #179bff
     }
@@ -150,6 +151,5 @@ li {
 /* DARK-MODE */
 .darkMode {
     background-color: black;
-    color: white;
-    z-index: -2;
+    color: #fff;
 };

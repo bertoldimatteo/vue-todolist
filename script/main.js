@@ -30,8 +30,8 @@ let app = new Vue({
         },
         addList() {
             if (this.newTodo !== ' ' ){
-                console.log(this.newTodo);
-                this.todo.push(this.newTodo);
+                const newObj = {text: this.newTodo , done: false}
+                this.todo.push(newObj);
                 this.newTodo = '';
             }
         },

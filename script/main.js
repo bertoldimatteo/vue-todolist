@@ -1,7 +1,24 @@
 let app = new Vue({
     el: '#root',
     data: {
-
+        todo: [
+            {
+                text: 'Fare la spesa',
+                done: false,
+            },
+            {
+                text: 'Fare il bucato',
+                done: false,
+            },
+            {
+                text: "Fare l'esercizio pomeridiano di Boolean",
+                done: false,
+            },
+            {
+                text: 'Andare in palestra',
+                done: false,
+            },
+        ]
     },
     methods: {
 
